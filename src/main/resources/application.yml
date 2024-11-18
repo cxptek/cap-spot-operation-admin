@@ -1,0 +1,80 @@
+app:
+  api-secret: APP_API_SECRET # APP_API_SECRET
+  jwt:
+    secret: APP_JWT_SECRET # APP_JWT_SECRET
+    expiration: P100D
+    version: 1
+cex-admin:
+  timezone: Asia/Ho_Chi_Minh
+springdoc:
+  show-actuator: false
+  swagger-ui:
+    doc-expansion: none
+    layout: BaseLayout
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+spring:
+  application:
+    name: CexAdminBackend
+  profiles:
+    active: local
+  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://postgres:5432/DB_NAME # SPRING_DATASOURCE_URL
+#    username: DB_USER # SPRING_DATASOURCE_USERNAME
+#    password: DB_PASSWORD # SPRING_DATASOURCE_PASSWORD
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 600000
+      minimum-idle: 2
+      maximum-pool-size: 10
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show-sql: false
+      properties:
+        hibernate:
+          format_sql: true
+    open-in-view: false
+  main:
+    lazy-initialization: false
+  data:
+    redis: # SPRING_DATA_REDIS_SSL_ENABLED
+      host: REDIS_HOST # k8s secret SPRING_DATA_REDIS_HOST
+      port: REDIS_PORT # k8s secret SPRING_DATA_REDIS_PORT
+  flyway:
+    enabled: false
+    baseline-on-migrate: true # we're using the same schema with CEX Backend
+    table: flyway_schema_history_admin # we're using the same schema with CEX Backend
+    locations: FLYWAY_LOCATIONS # SPRING_FLYWAY_LOCATIONS
+  output:
+    ansi:
+      enabled: always
+management:
+  health:
+    defaults:
+      enabled: false
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: INFO
+#      hibernate:
+#        orm:
+#          jdbc:
+#            bind: TRACE
+#        SQL: DEBUG
+#        type:
+#          descriptor:
+#            sql:
+#              BasicBinder: TRACE
+aws:
+  accessKeyId: "12345ABCDEF"
+  secretAccessKey: "12345ABCDEF"
+  region: "us-east-1"
+  s3:
+    symbol:
+      bucket:
+        name: 172422354804-build-artifacts

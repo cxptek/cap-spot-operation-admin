@@ -1,0 +1,1 @@
+ALTER TABLE public.partner_admin_user ADD CONSTRAINT partner_admin_user_unique UNIQUE (email);
