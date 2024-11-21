@@ -19,8 +19,6 @@ public class TradingPair extends BaseEntity {
     private String partnerId;
     private String symbolCode;
     private Boolean active;
-    private BigDecimal customMakerFee = BigDecimal.ZERO;
-    private BigDecimal customTakerFee = BigDecimal.ZERO;
-    private Date customFeeDateStart;
-    private Date customFeeDateEnd;
+    private BigDecimal makerFee = BigDecimal.ZERO;
+    private BigDecimal takerFee = BigDecimal.ZERO;
 }

@@ -14,8 +14,6 @@ public class TradingPairModel extends BaseModel {
     private String partnerId;
     private String symbolCode;
     private Boolean active;
-    private BigDecimal customMakerFee;
-    private BigDecimal customTakerFee;
-    private Date customFeeDateStart;
-    private Date customFeeDateEnd;
+    private BigDecimal makerFee;
+    private BigDecimal takerFee;
 }
