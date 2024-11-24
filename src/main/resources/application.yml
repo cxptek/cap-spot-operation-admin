@@ -16,7 +16,7 @@ springdoc:
     path: /v3/api-docs
 spring:
   application:
-    name: CexAdminBackend
+    name: CapSpotOperationAdminBackend
   profiles:
     active: local
   datasource:
