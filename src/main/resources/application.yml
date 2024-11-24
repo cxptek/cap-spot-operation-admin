@@ -18,7 +18,7 @@ spring:
   application:
     name: CapSpotOperationAdminBackend
   profiles:
-    active: local
+    active: dev
   datasource:
     password: sLx0U7L3lGNTTVYqHh
     url: jdbc:mysql://cex-mysql-dev.ckzdhgb5lvth.ap-southeast-1.rds.amazonaws.com:3306/cap-spot-operation-admin-db?useSSL=false&allowPublicKeyRetrieval=true
