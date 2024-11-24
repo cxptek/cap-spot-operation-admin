@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Disabled
-class CexAdminBackendApplicationTests {
+class CapSpotOperationAdminApplicationTests {
 
     @Test
     void contextLoads() {}

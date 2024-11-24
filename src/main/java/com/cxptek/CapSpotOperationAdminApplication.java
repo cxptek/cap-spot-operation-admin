@@ -6,10 +6,10 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-public class CexAdminBackendApplication {
+public class CapSpotOperationAdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CexAdminBackendApplication.class, args);
+        SpringApplication.run(CapSpotOperationAdminApplication.class, args);
     }
 
 }
