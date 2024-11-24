@@ -4,7 +4,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 
 @Data
 public class TradingPairResponse implements Serializable {
@@ -12,8 +11,6 @@ public class TradingPairResponse implements Serializable {
     private String partnerId;
     private String symbolCode;
     private Boolean active;
-    private BigDecimal customMakerFee;
-    private BigDecimal customTakerFee;
-    private Date customFeeDateStart;
-    private Date customFeeDateEnd;
+    private BigDecimal makerFee;
+    private BigDecimal takerFee;
 }
