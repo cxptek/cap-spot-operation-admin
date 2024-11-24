@@ -1,17 +1,21 @@
 package com.cxptek.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Index;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 @Getter
 @Setter
 @Entity
-@Table(schema = "public", indexes = {@Index(columnList = "partnerId,symbolCode")})
+@Table(indexes = {@Index(columnList = "partnerId,symbolCode")})
 public class TradingPair extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
