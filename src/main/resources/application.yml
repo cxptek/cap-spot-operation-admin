@@ -20,10 +20,10 @@ spring:
   profiles:
     active: local
   datasource:
+    password: sLx0U7L3lGNTTVYqHh
+    url: jdbc:mysql://cex-mysql-dev.ckzdhgb5lvth.ap-southeast-1.rds.amazonaws.com:3306/cap-spot-operation-admin-db?useSSL=false&allowPublicKeyRetrieval=true
+    username: dbadmin
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql:5432/DB_NAME # SPRING_DATASOURCE_URL
-    username: DB_USER # SPRING_DATASOURCE_USERNAME
-    password: DB_PASSWORD # SPRING_DATASOURCE_PASSWORD
     hikari:
       connection-timeout: 30000
       idle-timeout: 600000
@@ -44,7 +44,7 @@ spring:
       host: REDIS_HOST # k8s secret SPRING_DATA_REDIS_HOST
       port: REDIS_PORT # k8s secret SPRING_DATA_REDIS_PORT
   flyway:
-    enabled: false
+    enabled: true
     baseline-on-migrate: true # we're using the same schema with CEX Backend
     table: flyway_schema_history_admin # we're using the same schema with CEX Backend
     locations: FLYWAY_LOCATIONS # SPRING_FLYWAY_LOCATIONS
