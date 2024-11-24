@@ -20,9 +20,9 @@ spring:
   profiles:
     active: dev
   datasource:
-    password: sLx0U7L3lGNTTVYqHh
-    url: jdbc:mysql://cex-mysql-dev.ckzdhgb5lvth.ap-southeast-1.rds.amazonaws.com:3306/cap-spot-operation-admin-db?useSSL=false&allowPublicKeyRetrieval=true
-    username: dbadmin
+    url: jdbc:mysql://mysql:3306/DB_NAME # SPRING_DATASOURCE_URL
+    username: DB_USER # SPRING_DATASOURCE_USERNAME
+    password: DB_PASSWORD # SPRING_DATASOURCE_PASSWORD
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       connection-timeout: 30000
